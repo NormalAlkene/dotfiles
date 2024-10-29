@@ -1,0 +1,90 @@
+set term=kitty
+set nu
+set relativenumber
+set magic
+set nocompatible
+set mouse=a
+set confirm
+set noerrorbells
+set encoding=utf-8
+set fileencodings=utf-8,gbk,default
+set t_Co=256
+set vb t_vb=
+set background=light
+
+syntax on
+filetype plugin indent on
+
+set autoindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'easymotion/vim-easymotion'
+Plug 'ycm-core/YouCompleteMe' 
+Plug 'lervag/vimtex'
+Plug 'preservim/nerdtree'
+Plug 'fladson/vim-kitty'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+call plug#end()
+
+noremap j gj
+noremap gj j
+noremap k gk
+noremap gk k
+map ' <Leader>
+map <Leader> <Plug>(easymotion-prefix)
+
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+
+noremap <C-CR> <ESC>:YcmCompleter FixIt<CR>
+noremap <F2> <ESC>:YcmCompleter RefactorRename 
+noremap [Q <ESC>:YcmCompleter RefactorRename 
+nnoremap ! :YcmCompleter GoTo<CR>
+
+autocmd FileType asm filetype indent off
+autocmd FileType asm set noexpandtab | set tabstop=12 | set softtabstop=12 | set shiftwidth=12
+
+noremap <C-n> :NERDTreeToggle<CR>
+autocmd FileType tex map <buffer> <F5> <ESC>:VimtexCompile<CR>
+autocmd FileType tex map <buffer> [15;129~ <ESC>:VimtexCompile<CR>
+autocmd FileType tex map <buffer> [15~ <ESC>:VimtexCompile<CR>
+autocmd FileType tex map <buffer> <F3> <ESC>:VimtexView<CR>
+autocmd FileType tex map <buffer> [13;129~ <ESC>:VimtexView<CR>
+autocmd FileType tex map <buffer> [13~ <ESC>:VimtexView<CR>
+
+"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 0
+let g:vimtex_view_forward_search_on_start = 0
+let g:vimtex_compiler_latexmk = {
+            \ 'options': [
+            \ '-shell-escape',
+            \ ],
+            \}
+let g:UltiSnipsExpandTrigger="<c-t>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+if empty(v:servername) && exists('*remote_startserver')
+    call remote_startserver('VIM')
+endif
+
+colorscheme PaperColor

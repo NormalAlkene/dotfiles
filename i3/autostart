@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+xinputrc.sh
+ibus-daemon -drxR
+picom -b
+nm-applet
+update-dynv6.sh

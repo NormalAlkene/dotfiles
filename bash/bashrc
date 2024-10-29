@@ -1,0 +1,44 @@
+#
+# ~/.bashrc
+#
+# This file would not be executed if you are in fish.
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Wayland
+#export QT_QPA_PLATFORM=wayland
+#export GDK_BACKEND=wayland
+#export CLUTTER_BACKEND=wayland
+#export SDL_VIDEODRIVER=wayland
+#export XDG_SESSION_TYPE=wayland
+#export XDG_CURRENT_DESKTOP=sway
+#export XDG_SESSION_DESKTOP=sway
+#export MOZ_ENABLE_WAYLAND=1
+#export MOX_WEBRENDER=1
+#export QT_WAYLAND_FORCE_DPI=physical
+#export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_QPA_PLATFORM=xcb
+
+#ibus
+#export INPUT_METHOD=ibus
+#export IMSETTINGS_MODULE=ibus
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
+#export XIM_PROGRAM=ibus
+#export SDL_IM_MODULE=ibus
+#export QT_IM_MODULE=ibus
+#export GLFW_IM_MODULE=ibus
+
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
+alias vi=vim
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias less='less -R'
+
+PS1='[\u@\h \W]\$ '
+

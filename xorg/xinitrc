@@ -1,0 +1,2 @@
+xrdb -merge ~/.Xresources
+export XDG_MENU_PREFIX=arch-

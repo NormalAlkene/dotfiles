@@ -1,0 +1,35 @@
+#
+# ~/.bash_profile
+#
+
+. /etc/profile
+
+LANG=zh_CN.UTF-8
+
+export PATH=~/bin:~/.local/bin:$PATH
+
+export INPUT_METHOD=ibus
+export IMSETTINGS_MODULE=ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export XIM_PROGRAM=ibus
+export SDL_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export GLFW_IM_MODULE=ibus
+
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export XDG_MENU_PREFIX=arch-
+
+export TEXMFHOME=~/texmf
+
+#export http=http://127.0.0.1:7890
+#export https=http://127.0.0.1:7890
+#export http_proxy=http://127.0.0.1:7890
+#export https_proxy=http://127.0.0.1:7890
+
+alias less='less -R'
+alias vi='vim'
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
