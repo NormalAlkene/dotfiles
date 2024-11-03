@@ -7,6 +7,7 @@ set $right l
 
 set $autostart $HOME/.config/i3/autostart
 set $autostart_always $HOME/.config/i3/autostart_always
+
 set $bar $HOME/.config/polybar/launch.sh --colorblocks
 set $wall feh --no-fehbg -z --bg-fill "$HOME/Pictures/Wallpapers"
 set $term kitty
@@ -15,6 +16,7 @@ set $termexec kitty -e
 set $launcher "rofi -modi drun -show drun -theme gruvbox-light-hard"
 set $windows "rofi -show window -theme docu"
 set $browser firefox
+set $code code
 set $explorer dolphin
 set $explorer_terminal ranger
 set $lock i3lock-fancy-rapid 12 10 --nofork
@@ -62,6 +64,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec $term
 bindsym $mod+t exec $term
 bindsym $mod+n exec $browser
+bindsym $mod+m exec $code
 bindsym $mod+e exec $explorer
 bindsym $mod+Shift+e exec $termexec $explorer_terminal
 bindsym $mod+w exec $wall
