@@ -75,10 +75,12 @@ let g:vimtex_view_method = 'zathura'
 let g:vimtex_quickfix_mode = 0
 let g:vimtex_view_forward_search_on_start = 0
 let g:vimtex_compiler_latexmk = {
-            \ 'options': [
-            \ '-shell-escape',
-            \ ],
-            \}
+    \ 'aux_dir' : 'build',
+    \ 'options' : [
+    \   '-shell-escape',
+    \   '-synctex=1',
+    \ ],
+    \}
 let g:UltiSnipsExpandTrigger="<c-t>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
