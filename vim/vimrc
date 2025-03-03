@@ -38,6 +38,7 @@ Plug 'fladson/vim-kitty'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
+Plug 'github/copilot.vim', { 'on': 'Copilot' }
 call plug#end()
 
 noremap j gj
