@@ -20,7 +20,7 @@ set $code code
 set $explorer dolphin
 set $explorer_terminal ranger
 set $lock i3lock-fancy-rapid 12 10 --nofork
-set $prtsc "flameshot gui"
+set $prtsc "env QT_ENABLE_HIGHDPI_SCALING=0 flameshot gui"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
