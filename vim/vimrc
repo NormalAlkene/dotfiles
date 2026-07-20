@@ -38,7 +38,10 @@ Plug 'fladson/vim-kitty'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
-Plug 'github/copilot.vim', { 'on': 'Copilot' }
+"if &filetype !=? 'markdown' && &filetype !=? 'text' && &filetype !=? 'env' && &filetype !=? 'json' && &filetype !=? 'yaml' && &filetype !=? 'yml'
+"    Plug 'github/copilot.vim' ", { 'on': 'Copilot' }
+"endif
+"Plug 'luk400/vim-jukit', {'for': ['julia', 'python']}
 call plug#end()
 
 noremap j gj
@@ -91,3 +94,4 @@ if empty(v:servername) && exists('*remote_startserver')
 endif
 
 colorscheme PaperColor
+autocmd BufWinEnter * ++nested colorscheme PaperColor
