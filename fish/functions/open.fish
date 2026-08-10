@@ -1,3 +1,3 @@
 function open
-    xdg-open $argv > /dev/null 2> /dev/null & disown
+    xdg-open $argv & disown
 end
